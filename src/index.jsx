@@ -11,6 +11,15 @@ const Hello = () => (
   <div>Hello moi! This is a modification</div>
 );
 
+
+fetch('https://weatherapp.eficode.fi/api/forecast')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(JSON.stringify(myJson));
+  });
+
 class App extends Component {
   render() {
     return (
